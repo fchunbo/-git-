@@ -1,0 +1,3 @@
+在命令行切换到Git\bin目录下，输入如下命令：
+	rebase -b 0x76000000 msys-1.0.dll 
+就可以解决gitbash闪退的情况

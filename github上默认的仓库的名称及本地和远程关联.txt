@@ -1,0 +1,21 @@
+1.github中默认的远程仓库的名称是：origin
+
+2.注意：该名称是可以修改的，将本地仓库和github上的仓库同步时，
+使用git remote add origin github仓库地址 其中的origin就是仓库的名称，可以是修改
+为其他仓库的名称
+
+3.和远程库进行关联使用的是：
+	git remote add origin github远程仓库地址
+	
+4.第一次提交内容使用的是
+	git push -u origin  master
+	
+	此后每次提交内容可以简化命令为：
+		git push origin master
+
+5.将本地分支推送到远程库，并在远程库中自动创建
+	git push origin localBranchName:remoteBreanchName
+	
+	删除远程分支：
+	git push origin :remoteBreanchName
+	

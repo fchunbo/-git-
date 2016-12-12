@@ -1,0 +1,8 @@
+1.git checkout除了可以创建分支、切换分支外，还可以撤销未添加到暂存区中的修改。
+	理解：git管理的是修改，而不是文件
+	
+2.git checkout -- file
+	该命令是撤销未添加到暂存区中的修改，有两种情况：
+	1）修改了文件，但是没有提交，此时使用git checkout -- fileName可以撤销修改，恢复到最近一个git commit或git add的
+	状态。
+	2）修改了文件，并且使用了git add ，再次修改文件时，使用git checkout -- fileName只能回到git add后的状态。

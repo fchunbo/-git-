@@ -1,0 +1,68 @@
+1.git tag 作用
+	标签就是针对某个时间点的版本做标记，用于版本的发布
+	
+2.列出标签
+	git tag -l v.1.* ：可以进行模糊查找标签
+	git tag /git tag -l：列出所有的标签
+	
+３.打标签
+	1）git tag有两种类型的标签：
+		1）轻量标签：提交对象的引用，如果对象的引用有所更改会体现到对应的tag中
+		2）附注标签：则是仓库中的独立对象，及时tag对应的对象更改了，也不会体现到tag标记的版本中
+	建议使用附注标签
+	创建轻量标签的语法：（直接传递标签名即可）
+		git tag tagName
+		
+	创建附注标签：加上-a参数
+		git tag -a tagName -m "tag注释"
+		
+	创建轻量标签不需要传递参数，直接指定标签名称即可。
+	创建附注标签时，参数a即annotated的缩写，指定标签类型，后附标签名。
+	参数m指定标签说明，说明信息会保存在标签对象中。
+	
+	2）给历史版本打tag
+	git tag -a tagName commitCode
+	
+	例如：
+		(1) git reflog 
+			18b6690 HEAD@{0}: commit: 提交忽略文件
+			3f6efcd HEAD@{1}: commit: fdasf
+			e82148c HEAD@{2}: checkout: moving from master to dev
+			e82148c HEAD@{3}: commit (merge): dfsajl
+			bcab11d HEAD@{4}: commit: 2.txt增加内容
+			eab7af5 HEAD@{5}: commit: 修改2.txt文件
+			34a4b8d HEAD@{6}: commit: 创建3.txt文件
+			aa20e05 HEAD@{7}: commit: 创建2.txt文件
+			6847311 HEAD@{8}: pull https://github.com/fchunbo/testgit.git: Merge made by the 'recursive' strategy.
+			58345ad HEAD@{9}: commit (initial): create file
+
+		
+		(2) git tag -a v1.2.0 3f6efcd
+		
+4.切换标签
+	切换标签与切换分支使用的命令是一样的：
+		git checkout tagName
+
+5.查看标签信息
+	git show tagName
+	
+	会将当标签对应的分支信息列出
+
+6.删除标签（只是本地删除）
+	git tag -d tagName
+	
+	删除远程上的分支：(会将远程服务器中对应的tag删除)
+	git push origin :remote-tagName
+7.发布标签到远程服务器
+	git push origin localTagName #将指定的本地标签发布到服务中
+	git push origin --tags #将当前分支中所有未发布的标签发布到远程服务器中
+	
+8.如何同步远程tag到本地
+	git fetch origin --tags
+	
+
+	
+	
+
+	
+	

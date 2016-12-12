@@ -1,0 +1,12 @@
+1.将本地分支提交到git上，并在git上创建相应的分支
+	git push origin local_branch_name:remote_branch_name
+	git push --set-upstream origin branch_name
+	
+	删除git上相应的分支：本地分支名为空
+		git push origin :remote_branch_name
+		
+2.将本地分支代码推送到git上的分支
+	git push origin branch_name
+	
+3.版本回退后，如何推送到远程服务器中
+	git push -f orgin branch_name #强制推送

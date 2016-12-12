@@ -1,0 +1,9 @@
+1.git config
+	1）使用
+		git config --global user.name "userName"
+	来配置git commit提交的用户
+	
+	2）使用
+		git config --global user.email "emailAddress"
+	来配置git commit提交相关的email
+	

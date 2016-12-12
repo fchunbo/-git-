@@ -1,0 +1,6 @@
+1.使用git来产生ssh key
+	1）ssh -keygen -t rsa -b 4096 -C "email Address"
+	
+	2）当提示“输入ssh key文件名存储的路径时”直接Enter即可，会使用默认的路径来存储
+ssh key，默认的路径就是当前用户目录下的.ssh/中产生公钥和私钥
+	

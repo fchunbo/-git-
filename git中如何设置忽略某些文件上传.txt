@@ -1,0 +1,19 @@
+1.git中忽略文件上传，只需要在工作区创建一个名为".gitignore"文件，在文件中
+设置需要忽略上传的文件即可，下面是github中提供的java忽略文件上传的示例：
+	*.class
+
+	# BlueJ files
+	*.ctxt
+
+	# Mobile Tools for Java (J2ME)
+	.mtj.tmp/
+
+	# Package Files #
+	*.jar
+	*.war
+	*.ear
+
+	# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+	hs_err_pid*
+	
+其中#开头的是注释
